@@ -47,7 +47,7 @@ function HomeScreen({ navigation }: HomeProps) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', marginLeft: 10, marginRight: 10, marginTop: 10 }}>
       <PaperProvider>
-        <StatusBar style="light" translucent={false} />
+        <StatusBar style="light" />
         <SafeAreaView style={{ flex: 1 }}>
           <ScrollView>
             <RecipesPattern
