@@ -1,7 +1,7 @@
-import React from "react";
-import { Image, View } from "react-native";
-import { styles } from "./styles";
-import Logo from "../../assets/logo.png";
+import React from 'react';
+import { Image, View } from 'react-native';
+import { styles } from './styles';
+import Logo from '../../assets/favicon.png';
 
 const Header: React.FC = () => {
   return (

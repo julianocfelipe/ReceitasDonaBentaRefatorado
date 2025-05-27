@@ -10,23 +10,47 @@ import {
   ViewProps,
   TextProps,
   TextInputProps,
-  TouchableOpacityProps
+  TouchableOpacityProps,
 } from 'react-native';
 
 // Estilos usando StyleSheet
 const styles = StyleSheet.create({
-  keyboardView: {
-    flex: 1,
+  buttonSubmit: {
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ffbb89',
+    backgroundColor: '#BF2C62',
+    borderRadius: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+    width: '50%',
   },
   container: {
+    alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     paddingBottom: 30,
     width: '90%',
+  },
+  input: {
+    borderColor: '#000',
+    borderRadius: 10,
+    borderWidth: 1,
+    color: '#fff',
+    fontSize: 20,
+    marginBottom: 30,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+    width: '90%',
+  },
+  keyboardView: {
+    alignItems: 'center',
+    backgroundColor: '#ffbb89',
+    flex: 1,
+    justifyContent: 'center',
+  },
+  textSubmit: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   title: {
     color: '#000',
@@ -34,34 +58,13 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginBottom: 30,
   },
-  input: {
-    borderWidth: 1,
-    borderColor: '#000',
-    marginBottom: 30,
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    color: '#fff',
-    fontSize: 20,
-    borderRadius: 10,
-    width: '90%',
-  },
-  buttonSubmit: {
-    backgroundColor: '#BF2C62',
-    borderRadius: 10,
-    width: '50%',
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-  },
-  textSubmit: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
 });
 
 // Componentes estilizados com TypeScript
-export const KeyboardView: React.FC<KeyboardAvoidingViewProps> = ({ children, ...props }) => (
+export const KeyboardView: React.FC<KeyboardAvoidingViewProps> = ({
+  children,
+  ...props
+}) => (
   <KeyboardAvoidingView style={styles.keyboardView} {...props}>
     {children}
   </KeyboardAvoidingView>
@@ -87,7 +90,11 @@ export const Input: React.FC<TextInputProps> = ({ style, ...props }) => (
   />
 );
 
-export const ButtonSubmit: React.FC<TouchableOpacityProps> = ({ children, style, ...props }) => (
+export const ButtonSubmit: React.FC<TouchableOpacityProps> = ({
+  children,
+  style,
+  ...props
+}) => (
   <TouchableOpacity style={[styles.buttonSubmit, style]} {...props}>
     {children}
   </TouchableOpacity>
