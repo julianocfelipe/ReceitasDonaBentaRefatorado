@@ -13,6 +13,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Configuração de navegação básica.
 - Configuração do TypeScript: Inclusão do arquivo tsconfig.json para configurar o compilador TypeScript.
 - Ponto de entrada index.ts: Criação de um ponto de entrada centralizado para a aplicação.
+- Adição de Linters para verificação de erros no código.
 
 ### Alterado
 
