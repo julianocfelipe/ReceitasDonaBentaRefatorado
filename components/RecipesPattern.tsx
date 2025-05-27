@@ -9,7 +9,7 @@ interface RecipesPatternProps {
   buttonLabel?: string;
   buttonPress?: () => void;
   style?: ViewStyle;
-  [key: string]: any; // Para permitir outras props que possam ser passadas para o Card
+  [key: string]: any; // This allows for additional props passed via spread operator
 }
 
 export default function RecipesPattern({
@@ -19,14 +19,13 @@ export default function RecipesPattern({
   buttonLabel = "Clique aqui",
   buttonPress,
   ...props
-}: RecipesPatternProps) {
+}: Readonly<RecipesPatternProps>) { // <--- Applied Readonly here
   return (
     <Card {...props}>
       {image && <Card.Cover source={{ uri: image }} />}
       <Card.Title title={title} />
       {children && <Card.Content>{children}</Card.Content>}
       <Card.Actions>
-        {/* Se você quiser usar o buttonPress e buttonLabel, descomente abaixo */}
         {buttonPress && (
           <Button mode="contained" onPress={buttonPress}>
             {buttonLabel}
