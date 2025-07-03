@@ -30,6 +30,11 @@ Este aplicativo oferece as seguintes funcionalidades principais:
 - **Testes:** (Ex: Jest, React Testing Library) - _Este é um ponto a ser implementado._
 - **Linter/Formatador:** (Ex: ESLint, Prettier) - _Este é um ponto a ser implementado._
 
+## 📱 Telas
+
+![Tela de Login](./telas/login.png)
+
+
 ## ⚙️ Instalação
 
 Para configurar e rodar o projeto localmente, siga os passos abaixo:
