@@ -32,7 +32,7 @@ Este aplicativo oferece as seguintes funcionalidades principais:
 
 ## 📱 Telas
 
-![Tela de Login](./telas/login.png)
+![Tela de Login](./telas/telas.png)
 
 
 ## ⚙️ Instalação
